@@ -31,7 +31,7 @@ end
 
   end
 
-  it 'returns error if dock is full' do
+  it 'returns error if the dock is full' do
     bike = Bike.new
     subject.dock(bike)
      subject.instance_variable_get(:@bike) != nil
