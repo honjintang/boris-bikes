@@ -24,11 +24,11 @@ DEFAULT_CAPACITY = 20
   end
 
 
-attr_reader :capacity
-attr_writer :capacity
+attr_reader :bikes, :capacity
 
 private
-attr_reader :bikes
+
+
 
   def empty?
     @bikes.empty?

@@ -12,10 +12,10 @@ describe DockingStation do
       expect{ subject.dock(bike) }.to raise_error 'Docking station full'
   end
 
-    it 'assigns new capacity' do
+    it 'assigns capacity when initialized' do
       n = rand(0..100)
-      subject.capacity = n
-      expect(subject.capacity).to eq n
+      station = DockingStation.new(n)
+      expect(station.capacity).to eq n
     end
   end
 
