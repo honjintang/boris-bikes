@@ -9,13 +9,18 @@ DEFAULT_CAPACITY = 20
   end
 
   def release_bike
-    fail 'No bikes available' if empty?
-    @bikes.pop
+   if empty?
+      fail 'No bikes available'
+   elsif bikes[-1].working == false
+      fail 'This is a broken bike'
+   else
+      bikes.pop
+   end
   end
 
   def dock(bike)
     fail 'Docking station full' if full?
-    @bikes << bike
+    bikes << bike
   end
 
 
