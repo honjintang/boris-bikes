@@ -11,7 +11,7 @@ DEFAULT_CAPACITY = 20
   def release_bike
    if empty?
       fail 'No bikes available'
-   elsif bikes[-1].working == false
+   elsif bikes[-1].status == false
       fail 'This is a broken bike'
    else
       bikes.pop
@@ -24,10 +24,11 @@ DEFAULT_CAPACITY = 20
   end
 
 
-attr_reader :bikes, :capacity
+attr_reader :capacity
 attr_writer :capacity
 
 private
+attr_reader :bikes
 
   def empty?
     @bikes.empty?

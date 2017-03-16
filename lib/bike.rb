@@ -1,16 +1,16 @@
 class Bike
 
   def initialize
-    @working = true
+    @status = true
   end
 
   def working?
-    true if @working == true
+    true if @status == true
   end
 
   def is_broken
-    @working = false
+    @status = false
   end
 
-  attr_accessor :working
+  attr_accessor :status
 end

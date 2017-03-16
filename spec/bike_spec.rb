@@ -7,6 +7,6 @@ describe Bike do
 
   it "is broken" do
     subject.is_broken
-    expect ( subject.working ).should be false
+    expect ( subject.status ).should be false
   end
 end
