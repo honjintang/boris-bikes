@@ -1,4 +1,5 @@
 require 'docking_station'
+
 describe DockingStation do
 
   describe '#release_bike' do
@@ -24,7 +25,8 @@ describe '#release_bike' do
     expect(bike).to be_working
   end
 end
-describe '#dock_bike' do
+
+describe '#dock' do
   it 'docks something' do
     bike = Bike.new
     expect(subject.dock(bike)).to eq [bike]
